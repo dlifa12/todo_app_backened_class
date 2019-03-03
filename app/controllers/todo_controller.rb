@@ -3,6 +3,7 @@ class TodoController < ApplicationController
     end
     
     def show
+        @todo = Todo.find_by_id(params[:id])
         todo_id =params[:id]
         if todo_id == '1'
             
